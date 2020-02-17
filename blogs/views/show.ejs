@@ -1,0 +1,15 @@
+<% include Partials/header %>
+
+<div class = "container jumbotron">
+	<h2><%= blog.title %></h2>
+	<img src = "<%= blog.image %>">
+	<p><%- blog.body %><p>
+	<%= blog.created.toDateString() %>
+</div>
+<div class = "btn btn-primary">
+	<a href = "/blogs/<%= blog._id %>/Edit">Edit</a>
+</div>
+<form action = "/blogs/<%= blog.id %>" method = "POST">
+	<button class = "btn btn-primary">Delete</button>
+</form>
+<% include Partials/footer %>

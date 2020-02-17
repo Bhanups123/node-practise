@@ -1,0 +1,16 @@
+<% include partials/header %>
+<div style = "text-align: right">
+	<a class = "btn btn-primary" href = "/blogs/new">Add new blog</a>
+</div>
+<% blogs.forEach(function(blog){ %>
+<div>
+	<img src = "<%= blog.image %>">
+	<h2><%= blog.title %></h2>
+	<span><%= blog.created %> </span>
+	<p><%= blog.body.substring(0,100) %>...</p>
+</div>
+<div>
+	<a class = "btn btn-primary" href = "/blogs/<%= blog._id %>">Read More</a>
+</div>
+<% }); %>
+<% include partials/footer %>

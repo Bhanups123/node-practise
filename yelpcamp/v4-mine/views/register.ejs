@@ -1,0 +1,17 @@
+<% include partials/header %>
+<div style = 'text-align: center'>
+	<h2>Sign Up Page</h2>	
+</div>
+<div class = 'container' style = 'width: 30%; margin: 0 auto;'>
+	<form action = '/register' method = 'post'>
+		<div class = 'form-group'>
+			<input class = 'form-control' type = 'String' name = 'Username' placeholder = 'username'>
+		</div>
+		<div class = 'form-group'>
+			<input class = 'form-control' type = 'Password' name = 'Password' placeholder = 'password'>
+		</div>
+		<button class = 'btn btn-danger'>Sign Up</button>
+	</form>
+</div>
+
+<% include partials/footer %>

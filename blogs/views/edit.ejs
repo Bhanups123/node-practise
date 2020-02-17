@@ -1,0 +1,21 @@
+<% include Partials/header %>
+<div class = "jumbotron" style = "text-align: center">
+	<h4>Update <%= blog.title %></h4>
+</div>
+<div class = "container" style = "width:30%; margin: 0 auto">
+<form action = "/blogs/<%= blog._id %>" method = "POST">
+	<div class = "form-group">
+		<input class = "form-control" name = "blog[title]" type = "text" value = "<%= blog.title %>">
+	</div>
+	<div class = "form-group">
+		<input class = "form-control" name = "blog[image]" type = "text" value = "<%= blog.image %>">
+	</div>
+	<div class = "form-group">
+		<input class = "form-control" name = "blog[body]" type = "text" value = "<%= blog.body %>">
+	</div>
+	<div class = "form-group">
+		<button class = "btn btn-primary btn-block">Submit</button>	
+	</div>
+</form>
+</div>
+<% include Partials/footer %>
